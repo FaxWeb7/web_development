@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="shortcut icon" href="apple.png"> <!-- отображение картинки сайта -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- возможность добавлять респонсив дизайн -->
+    <link rel="stylesheet" href="styles.css"> <!-- подключение своего css файла -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> подключение шрифтов bootstrap -->
+</head>
+<body>
+    <!-- Block element блочный элемент-->
+    <div>Simple text</div>     <!-- занисает всю ширину (см. Инструменты разработчика) -->
+    <!-- Inline element строчный элемент-->
+    <span>Simple text</span>   <!-- Подстраивается под размер элемента (см. Инструменты разработчика) -->
+    
+    <!-- Атрибуты -->
+    <h1>Different heading</h1>
+    <br> <!-- разделение элементов не заметное для глаза -->
+    <h5>Different heading</h5>
+    <hr> <!-- разделение элементов линией -->
+    <p>Simple paragraph with text</p>
+    <hr>
+    <!-- Author -->
+    <address>Artem</address>
+    <hr>
+    <blockquote> <!-- цитаты -->
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Etiam ullamcorper interdum ex. Integer dignissim pulvinar lacus in gravida. 
+            Ut vel magna sit amet ligula dignissim efficitur fringilla in tellus. 
+            Curabitur pharetra urna id turpis pharetra placerat. 
+            Duis tempor augue ut erat pellentesque interdum.
+        </p>
+    </blockquote>
+    <hr>
+    <time>03-06-2007</time>  <!-- время -->
+    <hr>
+    <strong>Bold text</strong> <!-- жирный текст -->
+    <br>
+    <em>Italic Text</em> <!-- курсив -->
+    <hr>
+    <pre>  <!-- выводит код -->
+        <code>
+            <strong>
+                class Task(models.Model):
+                    title = models.CharField('Название', max_length=50)
+                    task = models.TextField('Описание')
+
+                    def __str__(self):
+                        return self.title
+            </strong>
+        </code>
+    </pre>
+    <hr>
+    <small>small text</small>
+    <br>
+    <big>big text</big>
+    <hr>
+
+    <!-- LISTS -->
+    <ul>
+        <li>Front end</li>
+        <li>back end</li>
+        <li>full stack</li>
+    </ul>
+    <hr>
+    <ol>
+        <li>Front end</li>
+        <li>back end</li>
+        <li>full end</li>
+    </ol>
+    <hr>
+    <ul>
+        <li>Front end
+            <ul>
+                <li>Mobile</li>
+                <li>Node.js</li>
+            </ul>
+        </li>
+        <li>back end</li>
+        <li>full end</li>
+    </ul>
+    <hr>
+
+    <!-- IMAGES -->
+    <img src="image.jpg" alt="Image" width="500">
+    <hr>
+
+    <!-- RESPONSIVE IMAGE -->
+    <picture>   
+        <source media="(min-width: 1024px)" srcset="https://picsum.photos/600/600"> <!-- отображение картинки при ширине экрана 1024 пикс. -->
+        <source media="(min-width: 768px)" srcset="https://picsum.photos/300/300">  <!-- отображение картинки при ширине экрана 768 пикс. -->
+        <source media="(min-width: 360px)" srcset="https://picsum.photos/100/100"> <!-- отображение картинки при ширине экрана 360 пикс. -->
+        <img src="https://picsum.photos/300/300" alt="Image">  <!-- отображение картинки по дефолту -->
+    </picture>
+    <hr>
+
+    <!-- ССЫЛКИ И КНоПКИ -->
+    <a href="https://youtube.com" target="_blank">youtube</a>   <!-- ССЫЛКА (target - ее открытие в новой вкладке)-->
+    <hr>
+    <a href="text.txt" download="">Download</a>   <!-- загрузка -->
+    <hr>
+    <a href="tel:+7925003928">+7925003928</a>   <!-- ССЫЛКА (target - ее открытие в новой вкладке)-->
+    <hr>
+    <button type="button">Button</button>
+    <button type="submit">Button</button>
+    <button type="reset">Button</button>
+    <hr>
+    <button type="button" autofocus>Button</button><hr>
+    <button type="button" disabled>Button</button> <hr>
+
+    <!-- input and datalist-->
+    <input type="text" list="list">
+    <datalist id="list">
+        <option value="Front-end"></option>
+        <option value="back-end"></option>
+        <option value="full-stack"></option>
+        <option value="php"></option>
+    </datalist><hr>
+
+    <meter value="15" min="0" max="100" low="20" high="75"> Progress</meter><br>
+    <meter value="45" min="0" max="100" low="20" high="75"> Progress</meter><br>
+    <meter value="90" min="0" max="100" low="20" high="75"> Progress</meter><hr>
+    <progress value="75" max="100">Progress bar</progress><hr>
+
+    <mark>Marked</mark><hr>
+    
+
+     <!-- forms -->
+    <form action="handler.php" name="simple form" autocomplete="on">
+        <fieldset>
+            <legend>Personal data</legend>
+            <label for="name">Your name:</label>
+            <input type="text"><br>
+            <label for="speciality">Choose your speciality</label>
+            <select name="spec" id="spec">
+                <option value="Front-end">Front-end</option>
+                <option value="back-end">back-end</option>
+                <option value="full-stack">full-stack</option>
+                <option value="php">php</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Personal message</legend>
+                <label for="name">Enter your message:</label><br>
+                <textarea name="message" id="area" cols="80" rows="12"></textarea>
+        </fieldset>
+    </form><hr>
+
+     <!-- inputs -->
+    <input type="text"><hr>
+    <input type="number" ><hr>
+    <input type="number" min="10" max="100" step="5"><hr>
+    <input type="password"><hr>
+    <input type="range"><hr>
+    <input type="date"><hr>
+    <input type="color"><hr>
+    <input type="submit"><br><br>
+    <input type="reset"><hr>
+    <input type="submit" value="Submit form"><br><br>
+    <input type="reset" value="Reset form"><hr>
+    <input type="text" list="list">
+        <datalist id="list">
+            <option value="Front-end"></option>
+            <option value="back-end"></option>
+            <option value="full-stack"></option>
+            <option value="php"></option>
+        </datalist><hr>
+    <input type="email" placeholder="Enter email"><hr>
+
+    <input type="tel"><hr>
+    <input type="search"><hr>
+    <input type="datetime-local"><hr>
+    <input type="month"><hr>
+    <input type="time"><hr>
+    <input type="week"><hr>
+    <input type="hidden" value="WebDev"><hr>
+    <input type="file"><hr>
+
+    <input type="checkbox" value="1"><br>
+    <input type="checkbox" value="2"><br>
+    <input type="checkbox" value="3"><hr>
+    <input type="radio" value="1"><br>
+    <input type="radio" value="2"><br>
+    <input type="radio" value="3"><hr>
+    
+    <!-- VIDEO -->
+    <audio src="test.mp3" width="500" height="300" controls></audio><br><br><hr>
+
+
+    <!-- TABLES -->
+
+    <table>
+        <caption>Member list</caption>
+        <thead>
+            <tr>
+                <td>speciality</td>
+                <td>quality</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Back</td>
+                <td>top</td>
+            </tr>
+            <tr>
+                <td>front</td>
+                <td>norm</td>
+            </tr>
+            <tr>
+                <td>full</td>
+                <td>bebra</td>
+            <tr>
+        </tbody>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+    
+
+    <br><br><br><hr>
+    <header></header>
+    <nav></nav>
+    <article></article>
+    <footer>
+        <p>bebra</p>
+        <p>bebra</p>
+        <p>bebra</p>
+        <p>bebra</p>
+        <p>bebra</p>
+    </footer>
+</body>
+</html>
+

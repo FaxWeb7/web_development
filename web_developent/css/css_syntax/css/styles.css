@@ -1,0 +1,605 @@
+/*
+
+body span{
+    color: lightpink;
+} 
+
+a[target="_blank"]{
+    color:black;
+    text-decoration: none;
+} */
+
+/* ========= ПСЕВДОЭЛЕМЕНТЫ И ПСЕВОДОКЛАССЫ ========= */
+/*a[target="_blank"]:hover{ /* при наведении курсора на элемент  
+    color: red;
+}
+
+a[target="_blank"]:visited{ /* при переходе по ссылке ссылка меняет цвет  
+    color: rgb(255, 0, 144);
+}
+
+a[target="_blank"]:active{ /* при зажиме курсорв на ссылке, но не переходя на нее  
+    color: green;
+}
+
+a[target="_blank"]:focus{ /* при исследовании сайта с помощью кнопки tab  
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+.lorem::first-letter{   /* для первой буквы  
+    color: rebeccapurple;
+    font-size: 40px;
+}
+
+.lorem::first-line{     /* для первой строки  
+    color: rgb(17, 109, 112);
+    font-size: 30px;
+}
+
+.lorem::selection{ /* при выделении элемента  
+    color: rgb(0, 255, 0);
+    background-color: yellow;
+}
+
+.webdev::before{  /* добавление контента к началу элемента  
+    content: "This is ";
+    color: rgb(134, 28, 28);
+}
+
+.webdev::after{   /* добавление контента к концу элемента  
+    content: ' job';
+    color: rgb(0, 96, 123);
+}
+
+.list1 li:first-child{    /* взаимодействие с первым элементом  
+    color:blue
+}
+
+.list1 li:last-child{     /* взаимодействие с последним элементом  
+    color:green;
+}
+
+.list2 li:nth-child(even){   /* взаимодействие с четным элементом (если в скобках указать число, то с этим элементом и будет взаимодействие) 
+    color:blue;
+}
+
+.list2 li:nth-child(odd){   /* взаимодействие с нечетным элементом (если в скобках указать число, то с этим элементом и будет взаимодействие) 
+    color:green;
+}
+
+.list3 li:nth-child(2n + 1){  /* взаимодействие с каждым вторым элементом списка начиная с первого элемента 
+    color:aqua;
+    text-transform: uppercase;
+    border: 2px solid black;
+}
+
+.list4 li:not(.item){   /* взаимодействие с теми элементами li, у которых нет класса item 
+    border: 3px solid coral;
+}
+
+/* ========= КАСКАДНОСТЬ И НАСЛЕДОВАНИЕ ========= */
+
+/* p{
+    background-color: green;
+    color:white;
+    padding:10px;
+}
+
+.style1{
+    background-color: aqua;
+    color: black;
+    border: none !important;
+}
+
+#style2{
+    background-color: pink;
+    border: 3px solid black;
+} */
+
+/* .paragraphs{
+    border:2px solid black;
+    color:blueviolet;
+    margin-bottom: 30px
+}
+p{
+    border:inherit; /* наследует значение border от вышестоящего элемента, то есть класса paragrapths 
+    margin: inherit; /* наследует значение margin от вышестоящего элемента, то есть класса paragrapths 
+} */
+
+/* <!-- ========= БЛОЧНАЯ МОДЕЛЬ И ОТСТУПЫ ========= 
+блочные элементы типо div занимают 100% ширины экрана.
+строчные элементы типо span занимают лишь размер который им необходим. со строчными элементами нельзя взаимодействовать с помощью margin*/
+
+/* .lorem2{
+    border: 2px solid red;
+}
+
+.test{
+    display: inline;    /* делает с блочной структуры строчную и наоборот (inline, block, inline-block)
+    border: 2px solid red;
+} */
+
+/* <!-- ========= ПОЗИЦИОНИРОВАНИЕ И z-index ========= */
+
+/* body{
+    height: 3000px;
+}
+
+h4 {
+    border: 1px solid black;
+    position: absolute;
+}
+
+.test{
+    border: 10px solid red;
+    min-width: 100px;      лучше всего использовать именно min-width, max-width...
+    height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: sticky;  /* position позволяет управлять элементом 
+    командами top, right, bottom и left 
+    (relative - отсчет пикс. от установленного места и позиционирование ПОД элементами,
+    absolute - отсчет пикс. от родительского элемента(или от body) и позиционирование НАД элементами,
+    fixed - отсчет пикс. от края окна ВСЕГДА
+    sticky - отсчет пикс. от верха окна(можно проверить, скролля страницу, можно использовать для хедера))
+    top: 30px;
+    right: 40px;
+} */
+
+
+/* <!-- ========= ЕДИНИЦЫ, ПЕРЕПОЛНЕНИЕ И УРОВНИ ЭЛЕМЕНТОВ ========= */
+
+/* .main{
+    font-size: 2px;
+}
+
+li{
+    /* font-size: 30px;   абсолютная величина, неизменяемая в зависимости от размера экрана */
+    /* font-size: 80%; */
+    /* font-size: 2em;  (в сколько то раз больше родителя (в 2 раза)) */
+    /* font-size: 3rem;    (в сколько то раз больше дефолтного браузерного размера (или указанного в теге html), к примеру дефолтный шрифт - 16px (в 3 раза больше - 48px)) 
+}
+
+.overlay{
+    background-color: rgba(128, 128, 128, 0.603);
+    color: white;
+    width: 100vw;  /* vw and vh - задает на сколько процентов от экрана будет показываться этот элемент (тут 100%) 
+    height: 100vh;
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.modal{
+    border: 3px solid red;
+    width: 300px;
+    height: 100px;
+    color: white;
+    background-color: rgba(23, 23, 185, 0.575);
+    position: absolute;
+    z-index: 1; /*    (определяет на каком слое будет отоюражаться элемент, 0-0 слой, 1 -1 слой и тд) 
+    overflow: auto;  /* (используется в тех случаях,
+    когда контент не помещается в элемент
+    auto-появляется скролл-бар
+    scroll-появляется скролл-бар даже если контент поместился
+    hidden-просто скрывается непомещаемое содержимое) 
+} */
+
+/* <!-- ========= ПЛАВАЮЩИЕ ЭЛЕМЕНТЫ И ОЧИСТКА ПОТОКА ========= */
+/*  
+.item {
+    padding: 20px;
+    color: white;
+}
+
+.wrapper{
+    padding: 30px;
+    background-color: gray;
+}
+
+.wrapper2 {
+    padding: 30px;
+    background-color: green;
+}
+
+.item1 {
+    float: left;  /* в данном случае сделал двухколонный лэйаут 
+    background-color: crimson;
+}
+
+.item2 {
+    background-color: cyan;
+    float: right;
+}
+
+.item3 {
+    background-color: purple;
+}
+
+/* если закомментить 3-ий элемент, то 1 и 2 элементы будут вставать посередине дивов.
+  чтобы это пофиксить, нужно задать такое значение after ему родителю: 
+
+.wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}*/
+
+
+/* ШРИФТЫ И ТЕКСТ */
+
+/* 1-ый способ: ссылку на шрифт можно взять на сайте google fonts скопировать линк и вставить в head*/
+/* body{
+    font-size: 35px;
+    font-family: 'Updock', cursive, sans-serif; /* sans-serif - шрифт без засечек 
+    font-style: italic;
+}
+
+/* 2-ой способ лучше: шрифты можно скачать оттуда-же
+и прописать такой скрипт чтобы его импортнуть 
+@font-face{
+    font-family: 'Updock';
+    src: url("fonts/Updock-Regular.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+h1{
+    text-decoration: underline overline line-through ;
+    letter-spacing: 15px; /* пробелы между буквами 
+    word-spacing:200px;  /* пробелы между словами 
+    line-height: 150px;  /* межстрочный интервал 
+    text-transform: uppercase lowercase capitalize;
+    text-align: center;
+}
+
+p{
+    text-indent: 40px; /* абзац 
+} */
+
+
+/* ГРАНИЦЫ И ТЕНИ */
+
+/* .example{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    border: 20px solid red;
+    border-right: 10px solid rgb(9, 245, 115); /*(типы границ border:
+    solid - сплошная
+    dashed - прерывистая
+    dotted - точечная
+    double - двойная сплошнаяs)
+}
+
+h1{
+    /* тень для текста - 1 параметр ось x, 2 ось y, 3 размытие  
+    text-shadow: 3px 3px 4px red, -3px -3px 4px rgb(0, 197, 30); 
+}
+
+.shadow{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 20px;
+    /* тень для квадрата - (inset делает тень изнутри) 1 параметр ось x, 2 ось y, 3 размытие  
+    box-shadow: inset 13px 13px 14px rgb(81, 0, 255), inset -13px -13px 14px rgb(0, 197, 30);
+} */
+
+
+/* СКРУГЛЕНИЕ УГЛОВ И СТИЛИЗАЦИЯ СПИСКОВ */
+
+/* .example{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    margin: 20px;
+    border-radius: 30px;  /* скругляет  
+}
+
+ul li{
+    font-size: 30px;
+    list-style-type:square; /* меняет кружочки перед элементами списка 
+    list-style-position: inside; /* расположение кружочков 
+    inside - распологаются там где и текст
+    outside - распологаются в padding
+} */
+
+/* ОТОБРАЖЕНИЕ ЭЛЕМЕНТОВ И ВЕНДОРНЫЕ ПРЕФИКСЫ */
+
+/* p{
+    font-size: 20px;
+}
+
+.first{
+    display: none; /* элемент удаляется со страницы (можно использовать для респонсив дизайна: удалять блоки для телефона)
+}
+
+.second{
+    visibility: hidden; /* элемент становится невидимым 
+    /*opacity: 0;   то же саиое что visibility hidden 
+} */
+
+
+/* ФОН */
+
+/* body{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    min-height: 100vh;
+    min-width:100vh;
+    background-color: grey;
+    background-image: url(img/background.jpg);
+    background-size: 50vw 50vh;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+} */
+
+
+/* ГРАДИЕНТЫ */
+
+/* body{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    min-width: 100vh;
+    min-height: 100vh;
+
+    /* background: linear-gradient(45deg, black 12%, red ,orange 50%, yellow 60%, blue 88%); 
+    /* background: radial-gradient( blue, rgb(221, 0, 255)); 
+} */
+
+/* ФИЛЬТРЫ */
+
+/*.wrapper{
+    height: 100vh;
+    width: 100vh;
+}
+
+h1{
+    transition: all 1s ease;   /* свойство для плавных переходов
+}
+
+h1:hover{
+    /* transform: rotate(180deg); 
+    /* transform: scale(1.2, 1.2); 
+    /* transform: translate(20%, 200%); 
+    /* transform: skew(45deg, 45deg);
+}*/
+
+/* ПЛАВНЫЕ ПЕРЕХОДЫ*/
+
+
+/* .example{
+    position: relative;
+    top: 200px;
+    left: calc(50% - 200px/2);
+    border: 4px solid rgb(170, 0, 255);
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color: aqua;
+
+    transition-duration: 0.5s;  /* свойство для плавных переходов  
+    /*transition-property: background-color;  если  плавный переход нужен для определенных действий
+}
+
+.example:hover{
+    background-color: red;
+    transform: scale(1.2);
+} */
+
+/* АНИМАЦИИ */
+
+/* .example{
+    position: relative;
+    top: 200px;
+    left: calc(50% - 200px/2);
+    border: 4px solid rgb(170, 0, 255);
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color: aqua;
+
+    animation-name: MyAnimation;
+    animation-duration: 4s;
+}
+
+@keyframes MyAnimation {
+    from{background-color: aqua;}
+    25%{background-color: red;transform: scale(1.2);}
+    50%{background-color: rgb(174, 0, 255); transform: scale(1.3);}
+    75%{background-color: rgb(0, 102, 255);transform: scale(1.2);}
+    to{background-color: aqua;}
+}
+
+.example:hover{
+    animation-play-state: paused; /* при наведении анимация останавливается 
+}  */
+
+
+/* ТАБЛИЦЫ И КУРСОP */
+
+/* body{
+    display: flex;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+table, table *{
+    border: 1px solid black;
+    max-width: 500px;
+    border-collapse: separate;
+    border-spacing: 4px;
+    caption-side: bottom;
+    text-align: left;
+    vertical-align: middle;
+    cursor: pointer;
+
+} */
+
+
+/* ТЕКСТОВЕ ЭФФЕКТЫ И МНОГОКОЛОННЫЙ ТЕКСТ */
+
+/* body{
+    display: flex;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.example{
+    font-size: 35px;
+    border: 4px solid black;
+    width: 150px;
+    min-height: 150px;
+    
+    /*overflow: hidden;    текст выходящий за элемент не отображается */
+    /*text-overflow: ellipsis;   текст выходящий за элемент не отображается, вместо него отображаются 3 точки*/
+    /*white-space: nowrap;    весь текст выводится в 1 строку */
+    /*word-wrap: break-word;   слова, не помещающиеся на строке автоматически переносятся на следующую 
+}
+
+
+.container{
+    column-count: 3;   /* распологает 3 колонки в 1 строке 
+    column-rule: 5px solid black;  /* разделяет кононки 
+    column-width: 500px;  
+} */
+
+/* МЕДИАЗАПРОСЫ */
+
+/* p{
+    max-width: 600px;
+}
+
+body{
+    padding: 10px 30px;
+    margin: 0;
+    height: 100vh;
+    background-color: lightgrey;
+    font-size: 24px;
+    font-family: monospace;
+} */
+
+
+
+/* screen - для мониторов
+   print - для принтеров  
+   all - все
+   speech - скринридеры*/
+
+/* min-width - мин. ширина экрана
+   min-height - мин. высота экрана
+   orientation: landscape - горизонтальный режим
+   orientation: portrait - вертикальный режим
+   device-aspect-ratio:16/9 - для соотношений экрана
+   min-resolution - 2dppx - для экранов с высокой плотностью пикс.*/
+
+/* @media screen and (min-width:992px) and (max-width:1200px){
+    body{
+        background-color: aqua;
+    }
+}
+
+@media screen and (orientation: portrait){
+    h1{
+        display: none;
+    }
+} */
+
+
+/* СТИЛИЗАЦИЯ ПЛЕЙСХОЛДЕРА И СКРОЛЛА, CSS-спрайты */
+/* 
+body{
+    padding: 10px 30px;
+    margin: 0;
+    height: 100vh;
+    background-color: lightgrey;
+    font-size: 24px;
+    font-family: monospace;
+} 
+
+input{
+    font-size: 24px;
+    padding: 5px 10px;
+    color:red;
+}
+
+::placeholder{
+    /* Chrome, firefox, opera, safari 
+    color:blue;
+    opacity: 1;
+}
+
+::-ms-input-placeholder{
+     /* Edge 
+    color:blue;
+}
+
+:-ms-input-placeholder{
+     /* IE 
+    color:blue;
+}
+
+
+::-webkit-scrollbar-track{
+    border: 5px solid rgba(255,255,255,0.23);
+    box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: linear-gradient(45deg, #00ffa1);
+    border-radius: 15px;
+}
+
+button{
+    width: 200px;
+    height: 150px;
+    background-image: url(img/btn.png);
+    background-position: left top;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    text-indent: -9999px; /* текст под картинкой 
+    border: none;
+    background-color: transparent;   /* делает png картинку без фона 
+    cursor: pointer; /* меняет курсор при наведении 
+
+}
+
+button:hover{
+    transition-duration: 0.5s;
+    transform: scale(1.07);
+}
+
+button:active{
+    background-position: bottom;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

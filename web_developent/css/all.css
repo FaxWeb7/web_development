@@ -1,0 +1,244 @@
+/* 
+CSS SYNTAX
+
+:hover - при наведении курсора на элемент  
+:visited - если ссылка уже бвла посещена
+:active - при зажиме курсорв на ссылке, но не переходя на нее  
+:focus - при исследовании сайта с помощью кнопки tab  
+::selection - при выделении элемента  
+::first-letter - для первой буквы  
+::first-line - для первой строки
+::before - добавление контента к началу элемента  
+::after - добавление контента к концу элемента  
+
+.list1 li:first-child - взаимодействие с первым элементом  
+.list1 li:last-child - взаимодействие с последним элементом  
+.list2 li:nth-child(even) - взаимодействие с четным элементом (если в скобках указать число, то с этим элементом и будет взаимодействие) 
+.list2 li:nth-child(odd) - взаимодействие с нечетным элементом (если в скобках указать число, то с этим элементом и будет взаимодействие) 
+.list3 li:nth-child(2n + 1) - взаимодействие с каждым вторым элементом списка начиная с первого элемента 
+
+.list4 li:not(.item) - взаимодействие с теми элементами li, у которых нет класса item 
+border: none !important - задает неизменяемое значение
+border:inherit - наследует значение border от вышестоящего элемента, или от родительского
+
+блочные элементы типо div занимают 100% ширины экрана.
+строчные элементы типо span занимают лишь размер который им необходим. со строчными элементами нельзя взаимодействовать с помощью margin
+
+display: inline, block, inline-block, flex, grid;
+position: sticky - position позволяет управлять элементом 
+  командами top, right, bottom и left 
+  (relative - отсчет пикс. от установленного места и позиционирование ПОД элементами,
+  absolute - отсчет пикс. от родительского элемента(или от body) и позиционирование НАД элементами,
+  fixed - отсчет пикс. от края окна ВСЕГДА
+  sticky - отсчет пикс. от верха окна(можно проверить, скролля страницу, можно использовать для хедера))
+
+font-size: 2em;  (в сколько то раз больше родителя (в 2 раза)) 
+font-size: 3rem - в сколько то раз больше дефолтного браузерного размера (или указанного в теге html)
+
+width: 100vw;   vw and vh - задает на сколько процентов от экрана будет показываться этот элемент 
+z-index: 1 - определяет на каком слое будет отоюражаться элемент, 0-0 слой, 1 -1 слой и тд
+
+overflow: auto - (используется в тех случаях,
+  когда контент не помещается в элемент
+  auto-появляется скролл-бар
+  scroll-появляется скролл-бар даже если контент поместился
+  hidden-просто скрывается непомещаемое содержимое) 
+
+.wrapper::after{   делать если нужно сделать блочные элементы из строчных
+  content: '';
+  display: block;
+  clear: both;
+}
+
+1-ый способ залить шрифт в прроект: ссылку на шрифт можно взять на сайте google fonts скопировать линк и вставить в head
+body{
+  font-size: 35px;
+  font-family: 'Updock', cursive, sans-serif; /* sans-serif - шрифт без засечек 
+  font-style: italic;
+}
+2-ой способ залить шрифт в прроект лучше: шрифты можно скачать оттуда-же
+и прописать такой скрипт чтобы его импортнуть 
+@font-face{
+    font-family: 'Updock';
+    src: url("fonts/Updock-Regular.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+text-decoration: underline overline line-through ;
+letter-spacing: 15px - пробелы между буквами 
+word-spacing:200px - пробелы между словами 
+line-height: 150px - межстрочный интервал 
+text-transform: uppercase lowercase capitalize;
+text-align: center;
+
+border-right: 10px solid rgb(9, 245, 115) -типы границ border:
+  solid - сплошная
+  dashed - прерывистая
+  dotted - точечная
+  double - двойная сплошная
+
+тень для квадрата - (inset делает тень изнутри) 1 параметр ось x, 2 ось y, 3 размытие  
+  box-shadow: inset 13px 13px 14px rgb(81, 0, 255), inset -13px -13px 14px rgb(0, 197, 30);
+
+list-style-type:square - меняет кружочки перед элементами списка 
+list-style-position: inside - расположение кружочков 
+  inside - распологаются там где и текст
+  outside - распологаются в padding
+
+display: none - элемент удаляется со страницы (можно использовать для респонсив дизайна: удалять блоки для телефона)
+visibility: hidden - элемент становится невидимым 
+opacity: 0; -  то же саиое что visibility hidden 
+
+background: linear-gradient(45deg, black 12%, red ,orange 50%, yellow 60%, blue 88%); 
+background: radial-gradient( blue, rgb(221, 0, 255)); 
+
+transition: all 1s ease - свойство для плавных переходов
+transform: rotate(180deg); 
+transform: scale(1.2, 1.2); 
+transform: translate(20%, 200%); 
+transform: skew(45deg, 45deg);
+
+@keyframes MyAnimation {
+    from{background-color: aqua;}
+    25%{background-color: red;transform: scale(1.2);}
+    50%{background-color: rgb(174, 0, 255); transform: scale(1.3);}
+    75%{background-color: rgb(0, 102, 255);transform: scale(1.2);}
+    to{background-color: aqua;}
+}
+.example:hover{
+    animation-name: MyAnimation;
+    animation-duration: 4s;
+}
+
+overflow: hidden - текст выходящий за элемент не отображается
+text-overflow: ellipsis - текст выходящий за элемент не отображается, вместо него отображаются 3 точки
+white-space: nowrap -  весь текст выводится в 1 строку 
+word-wrap: break-word - слова, не помещающиеся на строке автоматически переносятся на следующую 
+
+column-count: 3 - распологает 3 колонки в 1 строке 
+column-rule: 5px solid black - разделяет кононки 
+
+
+media
+  screen - для мониторов
+  print - для принтеров  
+  all - все
+  speech - скринридеры
+
+  min-width - мин. ширина экрана
+  max-height - макс. высота экрана
+  orientation: landscape - горизонтальный режим
+  orientation: portrait - вертикальный режим
+  device-aspect-ratio:16/9 - для соотношений экрана
+  min-resolution - 2dppx - для экранов с высокой плотностью пикс.
+@media screen and (min-width:992px) and (max-width:1200px){
+    body{
+        background-color: aqua;
+    }
+}
+
+CSS FLEXBOX
+
+display: flex - указывает на родительский элемент, 
+  и под него все подстраиваются 
+  flex - блочный эелемент и во всю ширину экрана
+  inline-flex - строчный и подстраивается под размер контента по ширине
+
+flex:1 - позволяет растягиваться эелементу по всей ширине родителя flex 
+flex-direction: row, row-reverse, column, column-reverse - направление flex-элемента
+flex-wrap: wrap - элементы flexbox будут переноситься на слудующие колонки вниз 
+flex-flow = flex-direction + flex-wrap
+gap:15px - расстояние между элементами во flex
+
+justify-content - редактирование контента по главной оси
+align-items - редактирование контента по поперечной оси
+align-content - редактирование многострочного контента по главной оси
+align-self - индивидуальное выравнивание элемента
+  center - посередине
+  flex-start - начало flexbox по x
+  flex-end - конец flexbox по x
+  space-between - выравнивает все элементы по лэйауту с пробелами 
+  space-around - выравнивает все элементы по лэйауту с пробелами и по бокам 
+  baseline - выравнивает все элементы по базовой линии
+  stretch - растягивает все элементы по высоте экрана 
+
+flex-grow: 1 - определяет размер элементов в пропоциях (у всех 1 - равный размер)
+flex-shrink - указывает, каким пространством элемент готов поделиться в случае сжатия экрана
+flex-basis - устанавливает размеры элемента
+flex = flex-grow + flex-shrink + flex-basis
+order: 1 - индекс по которому можно упорядочить элемент ( по умолчанию 0) 
+
+
+#CSS GRID
+
+
+grid-template-columns, grid-template-rows
+      min-content - элемент занимает минимальную часть grid
+      max-content - элемент занимает максимальную часть grid      
+      minmax - размер элемента колеблется от одного знач. к другому в зависимости от разрешения
+      fr (фракция) - определяет размер элемнта по отношению к другим  
+      repeat - умещяет заданное кол-во элементов по заданному размеру в одну строку 
+       
+grid-column-gap - отступы между элементами внутри элемента grid 
+
+grid-column-start - определяет начало grid-элемента по колонкам (ось x) 
+grid-column-end - определяет конец grid-элемента по колонкам (ось x)
+grid-row-start - определяет начало grid-элемента по строкам (ось y)
+grid-row-end - определяет конеу grid-элемента по строкам (ось y)
+  
+grid-column: 3 / 4 - обьединение grid-column-start и grid-column-end
+grid-row: 1 / 4 - обьединение grid-row-start и grid-row-end
+
+grid-area: 1 / 3 / 4 / 4 - обьединение grid-column и grid-row : grid-row-start / grid-column-start / grid-row-end / grid-column-end
+
+
+grid-template-columns: repeat(12, [col] 1fr) - значение в скобках - название для колонки или ряда 
+grid-row: row 3 / row 12 - обращение к колонкам и рядам по наименованию
+grid-column: span 2 - с помощью span можно указать насколько широкий будет элемент по колонкам или рядам
+
+
+justify-items - редактирование контента по главной оси
+align-items - редактирование контента по поперечной оси
+align-self - индивидуальное выравнивание элемента по поперечной оси
+justify-self - индивидуальное выравнивание элемента по главной оси
+  start - начало оси
+  end - конец оси
+  center - центр 
+
+justify-content - выравнивание всех grid-элементов по оси x
+align-content - выравнивание всех grid-элементов по оси y
+  start - начало оси
+  end - конец оси
+  center - центр 
+  space-between - пространство одинаково распределяется по всем элементам, но первый и последний на конце
+  space-around - пространство одинаково распределяется по всем элементам
+  space-evenly = space-around
+
+grid-auto-flow - определяет направление элементов
+  column - колонки
+  dense - смыкает все элементы вместе если образуется пустое пространство между ними
+
+order: 1 - индекс по которому можно упорядочить элемент ( по умолчанию 0) 
+
+repeat(auto-fill, 500px) - autofill автоматически определяет сколько колонок влезет в ширину экрана
+repeat(auto-fit, 500px) - autofill автоматически определяет сколько колонок влезет в ширину экрана
+
+
+.container{
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
+  grid-template-areas:"header header header"
+                      "nav main aside"
+                      "footer footer footer"
+}
+
+header{grid-area: header;}
+nav{grid-area: nav;}
+aside{grid-area: aside;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+
+
+*/

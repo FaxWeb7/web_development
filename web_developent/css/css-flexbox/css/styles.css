@@ -1,0 +1,886 @@
+
+/* ОСНОВНЫЕ ПОНЯТИЯ */
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+  .item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+  
+  .item-5 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+  
+  .item-6 {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+  
+  .item-7 {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+  
+  .item-8 {
+    background: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+.flex-container{
+    display: flex; /* указывает на родительский элемент, 
+    и под него все подстраиваются 
+    flex - блочный эелемент и во всю ширину экрана
+    inline-flex - строчный и подстраивается под размер контента по ширине
+    min-height: 100vh;
+} */
+
+
+/* НАПРАВЛЕНИЕ ОСЕЙ */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    flex:1;   /* позволяет растягиваться эелементу по всей ширине родителя flex 
+    padding: 10px;
+    font: 80px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+.item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+.item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    min-width: 100vh;
+    /* row - обычное отображение
+       row-reverse - справа налево
+       column - колонка
+       column-reverse - перевернутая колонка
+}
+
+@media screen and (max-width:992px){
+    .flex-container{
+        flex-direction: column;
+    }
+} */
+
+/* ОБЕРТКА ЭЛЕМЕНТОВ И ОТСТУПЫ */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+  .item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+  
+  .item-5 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+  
+  .item-6 {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+  
+  .item-7 {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+  
+  .item-8 {
+    background: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+.flex-container{
+    height: 100vh;
+    display: flex; 
+    gap:15px;   /* расстояние между элементами 
+    flex-wrap: wrap; /* элементы flexbox будут переноситься на слудующие колонки вниз 
+} 
+
+.flex-item{
+    width: calc(33.33% - 10px);
+} */
+
+/* ВЫРАВНИВАНИЕ ВДОЛЬ ГЛАВНОЙ ОСИ */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+  .item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+  
+  .item-5 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+  
+  .item-6 {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+  
+  .item-7 {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+  
+  .item-8 {
+    background: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center; 
+    /* редактирование контента по оси x
+    center - посередине
+    flex-start - начало flexbox по x
+    flex-end - конец flexbox по x
+    space-between - выравнивает все элементы по лэйауту с пробелами 
+    space-around - выравнивает все элементы по лэйауту с пробелами и по бокам 
+
+} 
+
+.flex-item{
+    width: 100px;
+} */
+
+/* ВЫРАВНИВАНИЕ ВДОЛЬ ПОПЕРЕЧНОЙ ОСИ */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+  .item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+
+
+.flex-container{
+    display: flex;
+    height: 100vh;
+    align-items: center;  
+    /* расмещает элементы по оси y
+    flex-start - начало flexbox по y
+    flex-end - конец flexbox по y
+    center - центр
+} 
+
+.flex-item{
+    width: 100px;
+} */
+
+/* МНОГОСТРОЧНОЕ ВЫРАВНИВАНИЕ */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+  .item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+  
+  .item-5 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+  
+  .item-6 {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+  
+  .item-7 {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+  
+  .item-8 {
+    background: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+.flex-container{
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-content: space-around;
+     /* расмещает элементы по оси y
+    flex-start - начало flexbox по y
+    flex-end - конец flexbox по y
+    center - центр
+} 
+
+.flex-item{
+    width: 400px;
+} */
+
+/* ИНДИВИДУАЛЬНОЕ ВЫРАВНИВАНИЕ ЭЛЕМЕНТОВ */
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+  .item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+  
+  .item-5 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+  
+  .item-6 {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+  
+.flex-item{
+    width: 100px;
+}
+
+.flex-container{
+    display: flex;
+    height: 100vh;
+} 
+
+.item-1{
+    align-self: stretch; /* элемент растягивается по высоте экрана 
+}
+
+.item-2{
+    align-self: flex-start; /* элемент подстраивается под свой размер на начале оси y экрана 
+}
+
+.item-3{
+    align-self: center; /* элемент подстраивается под середину оси y экрана 
+}
+
+.item-4{
+    align-self: flex-end;   /* элемент подстраивается под свой размер на конце оси y экрана 
+}
+
+.item-5{
+    align-self: baseline;
+}*/
+
+/* РАЗМЕРЫ ЭЛЕМЕНТОВ */
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+
+.flex-container{
+    display: flex;
+} 
+
+.flex-item{
+    /* width: 33.333%; 
+    /*flex-grow: 1;  определяет размер элементов 
+    
+}*/
+
+/* ОПРЕДЕЛЕНИЕ ПОРЯДКА ЭЛЕМЕНТОВ */
+/* 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.flex-container{
+    border: 10px solid #7f00ff;
+}
+
+.flex-item {
+    padding: 10px;
+    font: 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+  
+  .item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+  
+  .item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+  
+  .item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+  
+  .item-5 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+  
+  .item-6 {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+  
+  .item-7 {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+  
+  .item-8 {
+    background: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+.flex-container{
+    display: flex;
+    height: 100vh;
+
+} 
+
+.flex-item{
+    flex: 1;
+} 
+
+.item-1{
+  order: 1; /* индекс по которому можно кпорядочить элемент ( по умолчанию 0) 
+} 
+
+@media screen and (max-width:650px){
+  .flex-container{
+    flex-direction: column;
+  }
+  .item-2{
+    order: -1;
+  }
+}*/
+
+/* ВСЕ ОПРЕДЕЛЕНИЯ
+
+flex-direction - определяет направление элементов главной оси
+flex-wrap - разрешает перенос элементов на новыц ряд
+flex-flow - flex-direction + flex-wrap
+gap - задает отступы flex элементам
+justify-content - выравнивает элементы по главной оси
+align-items - выравнивает элементы по поперечной оси
+align-content - выравнивает многострочные элементы вдоль поперечной оси
+align-self - выравнивает отдельно элемент flexbox по поперечной оси
+center - посередине
+flex-start - начало flexbox 
+flex-end - конец flexbox 
+space-between - выравнивает все элементы по лэйауту с пробелами 
+space-around - выравнивает все элементы по лэйауту с пробелами и по бокам 
+
+flex-grow - указывает сколько свободного пространства юудет занимать элемент
+flex-shrink - указывает, каким пространством элемент готов поделиться в случае сжатия экрана
+flex-basis - устанавливает размеры элемента
+flex - flex-grow + flex-shrink + flex-basis
+order - индекс порядка элемента
+
+*/
+
+/* ВЛОЖЕННОСТЬ. ОБЕРТКА ЭЛЕМЕНТОВ С РАЗМЕРАМИ */
+/*
+body{
+  margin: 0;
+  padding: 0;
+  font: 70px "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.flex-container{
+  display: flex;
+  min-height: 100vh;
+  border: 10px solid purple;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-item{
+  text-shadow: 3px 3px 7px black;
+  justify-content: flex-start;
+  flex:1;
+  flex-wrap: wrap;
+  color:#fff;
+  text-align: center;
+  align-items: flex-start;
+}
+
+.item-1 {
+  background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+
+.item-2 {
+  background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+
+.item-3 {
+  background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+
+.inner-item-1{
+  background-color: grey;
+}
+
+.inner-item-2{
+  background-color: darkred;
+}
+
+.item-2{
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}*/
+
+/* ОБЕРТКА ЭЛЕМЕНТОВ С РАЗМЕРАМИ */
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+.flex-container{
+  border: 10px solid #7f00ff;
+}
+
+.flex-item {
+  padding: 10px;
+  font: 60px "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+  background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+
+.item-2 {
+  background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+
+.item-3 {
+  background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+
+.item-4 {
+  background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+
+.item-5 {
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+.item-6 {
+  background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+
+.item-7 {
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+
+.item-8 {
+  background: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+} 
+
+.flex-item{
+  flex:1;
+  flex-basis: 400px;
+} 
+
+.item-3{
+  flex-grow: 5;
+} */
+
+/* ПРАКТИЧЕСКИЙ ПРИМЕР 1 */
+/* 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+
+.flex-item {
+  font: 60px "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+  background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+
+.item-2 {
+  background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+
+.item-3 {
+  background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+
+.item-4 {
+  background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+
+.item-5 {
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} 
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+section{
+  flex: 3;
+}
+
+aside{
+  flex: 1;
+}
+
+@media screen and (max-width:620px){
+  main{
+    flex-direction: column;
+  }
+
+  section{
+    order: -1;
+  }
+} */
+
+/* ПРАКТИЧЕСКИЙ ПРИМЕР 2 */
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+
+.flex-item {
+  font: 60px "Roboto", sans-serif;
+  width: 300px;
+  min-height: 180px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-1 {
+  background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+
+
+.flex-container{
+  background-color: rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  */
+
+/* ПРАКТИЧЕСКИЙ ПРИМЕР 3 */
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+
+.flex-item {
+  font: 60px "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flex-container{
+  background-image: linear-gradient(45deg, #00ff26, #009dff);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+} 
+
+.content{
+  flex: 1;
+} */
+
+
+/* ПРАКТИЧЕСКИЙ ПРИМЕР 4 */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+
+.flex-item {
+  font: 40px "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flex-container{ 
+  background-color: #cf556c;
+  min-height: 100vh;
+  display: inline-flex;
+  padding: 10px;
+}
+
+aside{
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-1 {
+  background-image: linear-gradient(45deg, #ff8177, #cf556c);
+}
+
+.item-2 {
+  background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+
+.item-3 {
+  background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+
+.item-4 {
+  background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+
+.item-5 {
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+.item-6 {
+  background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+

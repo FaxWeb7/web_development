@@ -1,0 +1,421 @@
+
+
+/* СОЗДАНИЕ 3-х КОЛОНОЧНОГО МАКЕТА */
+
+/* .grid{
+  display: grid;
+  min-width: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap:15px;
+  /* grid-template-columns
+      min-content - элемент занимает минимальную часть grid
+      max-content - элемент занимает максимальную часть grid      minmax - размер элемента колеблется от одного знач. к другому в зависимости от разрешения
+      fr (фракция) - определяет размер элемнта по отношению к другим  
+      repeat - умещяет заданное кол-во элементов по заданному размеру в одну строку 
+      grid-column-gap - отступы между элементами внутри элемента grid 
+      
+}
+
+.grid-item1{
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  background-color: rgb(76, 246, 76);
+}
+
+.grid-item3{
+  background-color: rgb(85, 85, 244);
+} */
+
+
+/* УПРАВЛЕНИЕ РАЗМЕРАМИ И ПОЗИЦИЯМИ grid ЭЛЕМЕНТОВ */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  border: 5px dashed blue;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  
+}
+
+.grid-item1{/* 
+  grid-column-start - определяет начало grid-элемента по колонкам (ось x) 
+  grid-column-end - определяет конец grid-элемента по колонкам (ось x)
+  grid-row-start - определяет начало grid-элемента по строкам (ось y)
+  grid-row-end - определяет конеу grid-элемента по строкам (ось y)
+
+  grid-area: 1 / 3 / 4 / 4;
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  background-color: rgb(76, 246, 76);
+}
+
+.grid-item3{
+  background-color: rgb(85, 85, 244);
+} */
+
+
+/* ИМЕНОВАНИЕ GRID-ЛИНИЙ, ПОЗИЦИОНИРОВАНИЕ ЭЛЕМЕНТОВ */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  border: 5px dashed blue;
+  grid-template-columns: repeat(12, [col] 1fr);  /* значение в скобках - название 
+  grid-template-rows: repeat(8, [row] 1fr);
+  grid-column-gap: 25px;
+  
+}
+
+.grid-item1{
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  grid-column: col 1 / span 4;
+  grid-row: row 3 / row 12;
+  background-color: rgb(76, 246, 76);
+}
+
+.grid-item3{
+  background-color: rgb(85, 85, 244);
+} */
+
+
+/* СОЗДАНИЕ СЕТКИ */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  border: 5px dashed blue;
+  grid-template-columns: repeat(6, [col] 1fr);  /* значение в скобках - название 
+  grid-template-rows: repeat(3, [row] 1fr);
+  grid-gap: 15px;
+}
+
+.grid-item{
+  min-width: 18vh;
+  min-height: 15vh;
+}
+
+.grid-item1{
+  grid-column: span 2;   /* с помощью span можно указать насколько широкий будет элемент по колонкам 
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: rgb(136, 255, 136);
+}
+
+.grid-item3{
+  grid-column: span 1;
+  grid-row: span 2;
+  background-color: rgb(85, 85, 244);
+}
+
+.grid-item4{
+  background-color: rgb(85, 231, 244);
+}
+
+.grid-item5{
+  background-color: rgb(244, 85, 220);
+}
+
+.grid-item6{
+  background-color: rgb(244, 85, 103);
+}
+
+.grid-item7{
+  background-color: rgb(106, 255, 0);
+}
+
+.grid-item8{
+  background-color: rgb(255, 217, 0);
+}
+
+.grid-item9{
+  grid-column: span 2;
+  grid-row: span 1;
+  background-color: rgb(244, 133, 85);
+}
+
+.grid-item10{
+  grid-column: span 2;
+  grid-row: span 1;
+  background-color: rgb(255, 153, 0);
+}
+
+.grid-item11{
+  background-color: rgb(255, 0, 0);
+} */
+
+
+/* ВЫРАВНИВАНИЕ GRID-ЭЛЕМЕНТОВ */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  border: 5px dashed blue;
+  grid-template-columns: 1fr;  
+  grid-template-rows: 400px;
+  grid-gap: 15px;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.grid-item1{
+  background: linear-gradient(90deg, rgb(158, 158, 255), rgb(37, 37, 255), rgb(229, 61, 255));
+} */
+
+/* ВЫРАВНИВАНИЕ GRID-КОНТЕЙНЕРА */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  border: 5px dashed blue;
+  text-align: center;
+  grid-gap: 30px;
+  height: 600px;  
+  align-content: space-around;
+}
+
+.grid-item{
+  width: 100px;
+  height: 100px;
+}
+
+.grid-item1{
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  background-color: rgb(76, 246, 76);
+}
+
+.grid-item3{
+  background-color: rgb(85, 85, 244);
+} */
+
+/* ПОРЯДОК ЭЛЕМЕНТОВ GRID-КОНТЕЙНЕРА */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  border: 5px dashed blue;
+  text-align: center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.grid-item{
+  height: 300px;
+}
+
+.grid-item:nth-of-type(2){
+  order: 1;
+}
+
+.grid-item1{
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  background-color: rgb(76, 246, 76);
+}
+
+.grid-item3{
+  background-color: rgb(85, 85, 244);
+} */
+
+
+/* ВЛОЖЕННОСТЬ GRID-ЭЛЕМЕНТОВ */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  border: 5px dashed blue;
+  text-align: center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.grid-item1{
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  background-color: rgb(136, 255, 136);
+}
+
+.grid-item3{
+  background-color: rgb(85, 85, 244);
+}
+
+.grid-item4{
+  background-color: rgb(85, 231, 244);
+}
+
+.grid-item5{
+  background-color: rgb(244, 85, 220);
+}
+
+.grid-item6{
+  background-color: rgb(244, 85, 103);
+}
+
+.grid-item7{
+  background-color: rgb(106, 255, 0);
+}
+
+.grid-item8{
+  background-color: rgb(255, 217, 0);
+}
+
+.grid-item9{
+  background-color: rgb(244, 133, 85);
+}
+
+.grid-item10{
+  background-color: rgb(255, 153, 0);
+} */
+
+
+/* ГИБКОСТЬ GRID-ЭЛЕМЕНТОВ ПРИ ИЗМЕНЕНИИ РАЗМЕРА ОКНА */
+
+/* .grid{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  grid-gap: 10px;
+}
+
+.grid-item1{
+  background-color: rgb(239, 79, 79);
+}
+
+.grid-item2{
+  background-color: rgb(136, 255, 136);
+}
+
+.grid-item3{
+  background-color: rgb(85, 85, 244);
+}
+
+.grid-item4{
+  background-color: rgb(85, 231, 244);
+}
+
+.grid-item5{
+  background-color: rgb(244, 85, 220);
+}
+
+.grid-item6{
+  background-color: rgb(244, 85, 103);
+}
+
+.grid-item7{
+  background-color: rgb(106, 255, 0);
+}
+
+.grid-item8{
+  background-color: rgb(255, 217, 0);
+}
+
+.grid-item9{
+  background-color: rgb(244, 133, 85);
+}
+
+.grid-item10{
+  background-color: rgb(255, 153, 0);
+} */
+
+
+/* СОЗДАНИЕ ГИБКОГО МАКЕТА */
+
+.container{
+  font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  text-align: center;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
+  grid-template-areas:"header header header"
+                      "nav main aside"
+                      "footer footer footer"
+}
+
+header{grid-area: header;}
+nav{grid-area: nav;}
+aside{grid-area: aside;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+@media screen and (max-width:510px){
+  aside{
+    display: none;
+  }
+  .container{
+    grid-template-columns: minmax(50px, 100px) 1fr;
+    grid-template-areas:"header header"
+                        "nav main"
+                        "footer footer"
+  }
+}
+
+@media screen and (max-width:320px){
+  aside{
+    display: none;
+  }
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-areas:"header"
+                        "nav"
+                        "main"
+                        "footer"
+  }
+}
+
+.element-1{
+  background-color: rgb(239, 79, 79);
+}
+
+.element-2{
+  background-color: rgb(136, 255, 136);
+}
+
+.element-3{
+  background-color: rgb(85, 85, 244);
+}
+
+.element-4{
+  background-color: rgb(85, 231, 244);
+}
+
+.element-5{
+  background-color: rgb(244, 85, 220);
+}
+
+.element-6{
+  background-color: rgb(244, 85, 103);
+}

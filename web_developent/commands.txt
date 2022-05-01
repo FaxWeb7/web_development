@@ -1,0 +1,14 @@
+1) django-admin startproject taskmanager    создает изначальный проект
+2) python manage.py runserver               запускает сервер
+3) python manage.py startapp main           создает приложение
+4) python manage.py makemigrations          Создание бд с инфой
+5) python manage.py migrate                 запуск бд
+6) python manage.py createsuperuser         создание учетной записи для входа на /admin
+7)
+8)
+
+сайты шаблоны
+https://getbootstrap.com/docs/5.1/examples/
+https://www.bootstrapcdn.com/
+https://ru.wordpress.org/
+icons  https://fontawesome.com/icons
