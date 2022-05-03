@@ -54,7 +54,7 @@ $border: 2px solid silver;
 */
 
 ///////////////////////// ИСПОЛЬЗОВАНИЕ МИКСИНОВ /////////////////////////
-
+/*
 $bgColor: #cccccc;  
 $blockWidth: 300px;
 $border: 2px solid silver;
@@ -69,6 +69,10 @@ $border: 2px solid silver;
   font-weight: $fontW;
   font-family: arial, sans-serif;
   color: $color;
+}
+
+@mixin padd ($padding...){
+  padding: $padding;
 }
 
 #central-block{
@@ -89,15 +93,61 @@ $border: 2px solid silver;
 
 
 .block{
+  @include padd(20px 40px);
   background: $bgColor;
   height: 200px;
   width: $blockWidth;
   border: $border;
   margin-bottom: 20px;
 }
+*/
+
+///////////////////////// ПСЕВДОКЛАССЫ И ИМПОРТИРОВАНИЕ ДАННЫХ /////////////////////////
+
+$bgColor: #cccccc;  
+$blockWidth: 300px;
+$border: 2px solid silver;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin font ($color, $fontW){ 
+  font-size: 1.1em;
+  font-weight: $fontW;
+  font-family: arial, sans-serif;
+  color: $color;
+}
+
+@mixin padd ($padding...){
+  padding: $padding;
+}
+
+#central-block{
+  padding: 30px;
+
+  ul{
+    list-style: none;
+    display: inline-block;
+    li{
+      float:left;
+    }
+  }
+
+  a{  
+    @include font ($color: blue, bold);  
+  }
+}
 
 
-
-
+.block{
+  @include padd(20px 40px);
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}
 
 

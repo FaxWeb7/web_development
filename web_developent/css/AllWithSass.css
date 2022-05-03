@@ -245,13 +245,13 @@ footer{grid-area: footer;}
 $bgColor: #f58888 - создание переменной
 background: $bgColor - применение переменной
 
-@mixin font{...} - создание миксинa
-@mixin font ($color, $fontW){ - создание миксина с параметрами
+@mixin font{} - создание миксинa.   3 точки в параметре миксина обозначают, что это свойство может содержать несколько значений
+@mixin font ($color: знач. по умолчан., $fontW, $padd...){ - создание миксина с параметрами
   font-weight: $fontW;
   color: $color;
 }
 a{@include font} - подключение миксина
-a{@include font(blue, bold)} - подключение миксина с параметрами
+a{@include font($color: blue, bold)} - подключение миксина с параметрами
 
 
 
