@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*
+$bgColor: #f58888;  //создание переменной
+$blockWidth: 30%;
+$border: 5px solid green;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.block:not(.first){
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}*/
+/*
+$bgColor: #cccccc;  //создание переменной
+$blockWidth: 300px;
+$border: 2px solid silver;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#central-block{
+  padding: 30px;
+
+  ul{
+    list-style: none;
+    display: inline-block;
+  }
+  a{
+    color: blue;
+  }
+}
+
+
+.block{
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#central-block {
+  padding: 30px;
+}
+#central-block ul {
+  list-style: none;
+  display: inline-block;
+}
+#central-block a {
+  color: blue;
+}
+
+.block {
+  background: #cccccc;
+  height: 200px;
+  width: 300px;
+  border: 2px solid silver;
+  margin-bottom: 20px;
+}
