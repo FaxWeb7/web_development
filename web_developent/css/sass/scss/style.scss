@@ -113,7 +113,7 @@ $border: 2px solid silver;
   margin: 0;
 }
 
-@mixin font ($color, $fontW){ 
+@mixin font ($color, $fontW){  //создание миксина
   font-size: 1.1em;
   font-weight: $fontW;
   font-family: arial, sans-serif;
@@ -136,7 +136,7 @@ $border: 2px solid silver;
   }
 
   a{  
-    @include font ($color: blue, bold);  
+    @include font ($color: blue, $fontW:bold);  //подключение миксина
   }
 }
 
@@ -149,5 +149,4 @@ $border: 2px solid silver;
   border: $border;
   margin-bottom: 20px;
 }
-
 

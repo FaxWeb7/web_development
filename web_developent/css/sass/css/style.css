@@ -97,3 +97,33 @@ $border: 2px solid silver;
   margin-bottom: 20px;
 }
 */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#central-block {
+  padding: 30px;
+}
+#central-block ul {
+  list-style: none;
+  display: inline-block;
+}
+#central-block ul li {
+  float: left;
+}
+#central-block a {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  color: blue;
+}
+
+.block {
+  padding: 20px 40px;
+  background: #cccccc;
+  height: 200px;
+  width: 300px;
+  border: 2px solid silver;
+  margin-bottom: 20px;
+}
