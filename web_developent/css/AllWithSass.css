@@ -253,8 +253,8 @@ background: $bgColor - применение переменной
 a{@include font} - подключение миксина
 a{@include font($color: blue, bold)} - подключение миксина с параметрами
 
-
-
+&:hover{color: red;} - добавление псевдокласса через амперсант
+@import "variables"; - импортирование
 
 
 

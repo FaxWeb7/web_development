@@ -103,25 +103,13 @@ $border: 2px solid silver;
 */
 
 ///////////////////////// ПСЕВДОКЛАССЫ И ИМПОРТИРОВАНИЕ ДАННЫХ /////////////////////////
-
-$bgColor: #cccccc;  
-$blockWidth: 300px;
-$border: 2px solid silver;
+/*
+@import "variables";
+@import "mixins";
 
 * {
   padding: 0;
   margin: 0;
-}
-
-@mixin font ($color, $fontW){  //создание миксина
-  font-size: 1.1em;
-  font-weight: $fontW;
-  font-family: arial, sans-serif;
-  color: $color;
-}
-
-@mixin padd ($padding...){
-  padding: $padding;
 }
 
 #central-block{
@@ -136,10 +124,17 @@ $border: 2px solid silver;
   }
 
   a{  
-    @include font ($color: blue, $fontW:bold);  //подключение миксина
+    @include font ($color: blue, $fontW:bold);  
+
+    &:hover{    //добавление псевдокласса через амперсант
+      color: red;
+    }
   }
 }
 
+a{
+  @include link(blue, white, green, rgb(44, 255, 192))
+}
 
 .block{
   @include padd(20px 40px);
@@ -149,4 +144,52 @@ $border: 2px solid silver;
   border: $border;
   margin-bottom: 20px;
 }
+
+*/
+
+///////////////////////// МАТЕМАТИЧЕСКИЕ ОПЕРАЦИИ И ФУНКЦИИ /////////////////////////
+
+@import "variables";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#central-block{
+  padding: 30px;
+
+  ul{
+    list-style: none;
+    display: inline-block;
+    li{
+      float:left;
+    }
+  }
+
+  a{  
+    @include font ($color: blue, $fontW:bold);  
+
+    &:hover{    //добавление псевдокласса через амперсант
+      color: red;
+    }
+  }
+}
+
+a{
+  @include link(blue, white, green, rgb(44, 255, 192))
+}
+
+.block{
+  @include padd(20px 40px);
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}
+
+
+
 

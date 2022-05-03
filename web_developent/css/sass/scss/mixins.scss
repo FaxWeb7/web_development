@@ -1,0 +1,23 @@
+@mixin font ($color, $fontW){  
+  font-size: 1.1em;
+  font-weight: $fontW;
+  font-family: arial, sans-serif;
+  color: $color;
+}
+
+@mixin padd ($padding...){
+  padding: $padding;
+}
+
+@mixin link($link, $hover, $active, $visited){
+  color: $link;
+  &:hover{
+    color: $hover;
+  }
+  &:active{
+    color: $active;
+  }
+  &:visited{
+    color:$visited;
+  }
+}

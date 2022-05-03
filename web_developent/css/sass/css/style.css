@@ -97,6 +97,49 @@ $border: 2px solid silver;
   margin-bottom: 20px;
 }
 */
+/*
+@import "variables";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#central-block{
+  padding: 30px;
+
+  ul{
+    list-style: none;
+    display: inline-block;
+    li{
+      float:left;
+    }
+  }
+
+  a{  
+    @include font ($color: blue, $fontW:bold);  
+
+    &:hover{    //добавление псевдокласса через амперсант
+      color: red;
+    }
+  }
+}
+
+a{
+  @include link(blue, white, green, rgb(44, 255, 192))
+}
+
+.block{
+  @include padd(20px 40px);
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}
+
+*/
 * {
   padding: 0;
   margin: 0;
@@ -117,6 +160,22 @@ $border: 2px solid silver;
   font-weight: bold;
   font-family: arial, sans-serif;
   color: blue;
+}
+#central-block a:hover {
+  color: red;
+}
+
+a {
+  color: blue;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: green;
+}
+a:visited {
+  color: #2cffc0;
 }
 
 .block {
