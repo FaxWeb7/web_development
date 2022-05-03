@@ -148,6 +148,58 @@ a{
 */
 
 ///////////////////////// МАТЕМАТИЧЕСКИЕ ОПЕРАЦИИ И ФУНКЦИИ /////////////////////////
+/*
+@import "variables";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#central-block{
+  padding: 30px;
+
+  ul{
+    list-style: none;
+    display: inline-block;
+    li{
+      float:left;
+      width: (100%+30%);
+    }
+  }
+
+  a{  
+    @include font ($color: blue, $fontW:bold);  
+
+    &:hover{    //добавление псевдокласса через амперсант
+      color: red;
+    }
+  }
+}
+
+a{
+  @include link(blue, white, green, rgb(44, 255, 192))
+}
+
+#grid{
+  float: left;
+  width: 100%;
+  div{
+    @include grid(4, 2%);
+  }
+}
+
+.block{
+  @include padd(20px 40px);
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}*/
+
+///////////////////////// УСЛОВИЯ, ЦИКЛЫ И ОПЕРАТОР content /////////////////////////
 
 @import "variables";
 @import "mixins";
@@ -165,6 +217,7 @@ a{
     display: inline-block;
     li{
       float:left;
+      width: (100%+30%);
     }
   }
 
@@ -181,6 +234,31 @@ a{
   @include link(blue, white, green, rgb(44, 255, 192))
 }
 
+#grid{
+  float: left;
+  width: 100%;
+  div{
+    @include grid(3, 2%);
+  }
+}
+
+@for $i from 1 to 5{ //цикл for
+  .#{$someVar}-#{$i}{
+    color: red;
+    width: 50px + $i;
+    height: 50px + $i;
+  }
+}
+
+.header{
+  // использование @content
+  @include link (blue, white, green, rgb(44, 255, 192)){
+    &:visited{
+      color: grey;
+    }
+  }
+}
+
 .block{
   @include padd(20px 40px);
   background: $bgColor;
@@ -189,7 +267,5 @@ a{
   border: $border;
   margin-bottom: 20px;
 }
-
-
 
 

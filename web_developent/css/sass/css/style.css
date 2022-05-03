@@ -140,6 +140,56 @@ a{
 }
 
 */
+/*
+@import "variables";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#central-block{
+  padding: 30px;
+
+  ul{
+    list-style: none;
+    display: inline-block;
+    li{
+      float:left;
+      width: (100%+30%);
+    }
+  }
+
+  a{  
+    @include font ($color: blue, $fontW:bold);  
+
+    &:hover{    //добавление псевдокласса через амперсант
+      color: red;
+    }
+  }
+}
+
+a{
+  @include link(blue, white, green, rgb(44, 255, 192))
+}
+
+#grid{
+  float: left;
+  width: 100%;
+  div{
+    @include grid(4, 2%);
+  }
+}
+
+.block{
+  @include padd(20px 40px);
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}*/
 * {
   padding: 0;
   margin: 0;
@@ -154,6 +204,7 @@ a{
 }
 #central-block ul li {
   float: left;
+  width: 130%;
 }
 #central-block a {
   font-size: 1.1em;
@@ -169,13 +220,64 @@ a {
   color: blue;
 }
 a:hover {
-  color: white;
+  color: black;
 }
 a:active {
   color: green;
 }
-a:visited {
-  color: #2cffc0;
+
+#grid {
+  float: left;
+  width: 100%;
+}
+#grid div {
+  float: left;
+  background: #ce3d3d;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  height: 150px;
+  width: 32%;
+  margin-right: 2%;
+}
+#grid div:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.class-1 {
+  color: red;
+  width: 51px;
+  height: 51px;
+}
+
+.class-2 {
+  color: red;
+  width: 52px;
+  height: 52px;
+}
+
+.class-3 {
+  color: red;
+  width: 53px;
+  height: 53px;
+}
+
+.class-4 {
+  color: red;
+  width: 54px;
+  height: 54px;
+}
+
+.header {
+  color: blue;
+}
+.header:hover {
+  color: black;
+}
+.header:active {
+  color: green;
+}
+.header:visited {
+  color: grey;
 }
 
 .block {

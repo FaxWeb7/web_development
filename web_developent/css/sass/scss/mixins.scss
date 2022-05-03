@@ -12,12 +12,32 @@
 @mixin link($link, $hover, $active, $visited){
   color: $link;
   &:hover{
-    color: $hover;
+    color: darken($link, 50%);
   }
   &:active{
     color: $active;
   }
-  &:visited{
-    color:$visited;
+  @content;
+}
+
+@mixin grid($columns, $margin){
+  float: left;
+  background: #ce3d3d; //function
+  margin-right: $margin;
+  margin-bottom: $margin;
+  height: 150px;
+
+  @if ($columns >= 5){
+    width: 100%;
+    margin-right: 0;
+  }
+  @else{
+    width: ((100% - (($columns - 1) * $margin)) / $columns);
+    margin-right: $margin;
+  }
+  
+
+  &:nth-child(#{$columns}n){
+    margin-right: 0px;
   }
 }

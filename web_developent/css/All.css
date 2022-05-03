@@ -256,9 +256,17 @@ a{@include font($color: blue, bold)} - подключение миксина с 
 &:hover{color: red;} - добавление псевдокласса через амперсант
 @import "variables"; - импортирование
 
+https://www.rubydoc.info/gems/sass/Sass/Script/Functions - website with all functions
+@if ($columns >= 5){} - цикл if
+@else{} - цикл else
 
-
-
+@content - используя content в конце миксина, при вызове этого 
+миксина к нему можно будет что-либо добавить:
+@include link (blue, white, green, rgb(44, 255, 192)){
+  &:visited{
+    color: grey;
+  }
+}
 
 
 
