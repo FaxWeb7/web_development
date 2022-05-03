@@ -240,5 +240,26 @@ main{grid-area: main;}
 footer{grid-area: footer;}
 
 
+----------------------------SCSS----------------------------
+
+$bgColor: #f58888 - создание переменной
+background: $bgColor - применение переменной
+
+@mixin font{...} - создание миксинa
+@mixin font ($color, $fontW){ - создание миксина с параметрами
+  font-weight: $fontW;
+  color: $color;
+}
+a{@include font} - подключение миксина
+a{@include font(blue, bold)} - подключение миксина с параметрами
+
+
+
+
+
+
+
+
+
 
 */

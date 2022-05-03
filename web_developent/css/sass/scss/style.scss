@@ -64,6 +64,13 @@ $border: 2px solid silver;
   margin: 0;
 }
 
+@mixin font ($color, $fontW){  //создание миксина
+  font-size: 1.1em;
+  font-weight: $fontW;
+  font-family: arial, sans-serif;
+  color: $color;
+}
+
 #central-block{
   padding: 30px;
 
@@ -75,8 +82,8 @@ $border: 2px solid silver;
     }
   }
 
-  a{
-    color: blue;
+  a{  
+    @include font ($color: blue, bold);  //подключение миксина
   }
 }
 
