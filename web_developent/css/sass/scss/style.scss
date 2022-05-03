@@ -34,6 +34,9 @@ $border: 2px solid silver;
   ul{
     list-style: none;
     display: inline-block;
+    li{
+      float:left;
+    }
   }
   a{
     color: blue;
@@ -67,6 +70,9 @@ $border: 2px solid silver;
   ul{
     list-style: none;
     display: inline-block;
+    li{
+      float:left;
+    }
   }
 
   a{

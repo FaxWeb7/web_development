@@ -32,6 +32,9 @@ $border: 2px solid silver;
   ul{
     list-style: none;
     display: inline-block;
+    li{
+      float:left;
+    }
   }
   a{
     color: blue;
@@ -58,6 +61,9 @@ $border: 2px solid silver;
 #central-block ul {
   list-style: none;
   display: inline-block;
+}
+#central-block ul li {
+  float: left;
 }
 #central-block a {
   color: blue;
