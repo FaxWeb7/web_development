@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/nav.ejs')%>
+  <h1>Posts:</h1>
+  <ul>
+    <% if (posts.length) { %>
+      <% posts.forEach(({ id, title, date, text, author, createdAt }) => { %>
+        <li>
+          <article>
+            <h2>
+              <a href="/posts/<%= id %>"><%= title %></a>
+            </h2>
+            <p><%= text %></p>
+            <div class="info">
+              <span><%= createdAt.toLocaleDateString() %></span>
+              <span><%= author %></span>
+            </div>
+            <button class="btn-delete" data-id="<%= id %>">
+              <i class="fas fa-trash-alt" data-id="<%= id %>"></i>
+            </button>
+          </article>
+        </li>
+      <% }) %>
+    <% } %>
+  </ul>
+
+  <script>
+    document.addEventListener("click", (e) => {  //прослушка по всем кликам в этом документе
+      const id = e.target?.dataset?.id || null; //если клиент кликает на какой-то элемент, у которого есть id в БД, то выполняется условие
+      if (id) {
+        fetch(`/posts/${id}`, {  // ссылка на страницу и функция, в данном случае меняющая отправляющая метод delete, который уже будет обработан в server.js
+          method: 'DELETE',
+        }).then(() => {  //в случае если пост удален, окно браузер перезагружается
+          window.location.reload();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

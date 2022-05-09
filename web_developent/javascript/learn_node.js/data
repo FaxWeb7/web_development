@@ -1,0 +1,4 @@
+1. npm install dotenv chalk
+2. создать файл .env и .gitignore > добавить в файл .env секретные const, а в файл .gitignore файл .env. Изменить подключение к серверу в файле server.js
+3. добавить ключ engines в package.json, в котором будет храниться версия node.js
+4. заходим на heroku и создаем приложение

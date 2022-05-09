@@ -961,11 +961,11 @@ document.querySelector("#myBtn").onclick = function(){
 
 //element.addEventListener(type, function);
 
-const div = document.querySelector("#myDiv")
+// const div = document.querySelector("#myDiv")
 
-div.style.backgroundColor = "grey";
-div.style.width = "200px";
-div.style.height = "200px";
+// div.style.backgroundColor = "grey";
+// div.style.width = "200px";
+// div.style.height = "200px";
 /*
 div.addEventListener("click", e => {  //нажатие мышки
   console.log("You clicked the mouse");
@@ -988,31 +988,44 @@ div.addEventListener("dblclick", e => { //двойной клик
 })
 */
 
-div.addEventListener("contextmenu", e => {   //ПКМ
-  console.log("You opened the context menu");
-})
+// div.addEventListener("contextmenu", e => {   //ПКМ
+//   console.log("You opened the context menu");
+// })
 
-div.addEventListener("mouseover", e => {  //при наведении
-  console.log("You entered the square!");
-  div.style.backgroundColor = "green";
-})
+// div.addEventListener("mouseover", e => {  //при наведении
+//   console.log("You entered the square!");
+//   div.style.backgroundColor = "green";
+// })
 
-div.addEventListener("mouseleave", e => {  //при отведении
-  console.log("You left the square!");
-  div.style.backgroundColor = "pink";
-})
+// div.addEventListener("mouseleave", e => {  //при отведении
+//   console.log("You left the square!");
+//   div.style.backgroundColor = "pink";
+// })
 
-div.addEventListener("mousemove", e => {  ////при наведении много раз
-  console.log("You are within the square!");
-})
-
-
+// div.addEventListener("mousemove", e => {  ////при наведении много раз
+//   console.log("You are within the square!");
+// })
 
 
 
+//////////// OPERATOR ? ////////////
 
+/*
+let accessAllowed;
+let age = prompt('Сколько вам лет?', '');
 
+if (age > 18) {
+  accessAllowed = true;
+} 
+else {
+  accessAllowed = false;
+}
 
+alert(accessAllowed);*/
+
+let age = prompt('Сколько вам лет?', '');
+let accessAllowed = (age > 18) ? true : false;
+alert(accessAllowed);
 
 
 
